@@ -1,7 +1,15 @@
 CHARACTER|Bride Saber|green|2| |Decorativo$Y que decorativo es$No?|0|0|20000|1|Tipo1,Tipo2
-CHARACTER|Bride Saber|green|2| |Decorativo$Y que decorativo es$No?|0|0|20000|1|Tipo1,Tipo2
-CHARACTER|Bride Saber|green|2| |Decorativo$Y que decorativo es$No?|0|0|20000|1|Tipo1,Tipo2
-CHARACTER|Bride Saber|green|2| |Decorativo$Y que decorativo es$No?|0|0|20000|1|Tipo1,Tipo2
+CHARACTER|Gohan SSJ2|blue|2| |Gohan en la pelea con cell$ donde alcanza esta transformación.|1|1|3000|1|Tipo1,Tipo2
+CHARACTER|Gohan SSJ2|blue|2| |Gohan en la pelea con cell$ donde alcanza esta transformación.|1|1|3000|1|Tipo1,Tipo2
+CHARACTER|Freezer|red|1| |Freezer en su ultima transformación|2|1|4000|1|Tipo1,Tipo2
+CHARACTER|Freezer|red|1| |Freezer en su ultima transformación|2|1|4000|1|Tipo1,Tipo2
+CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|1|2500|1|Maldad,Saiyajin
+CHARACTER|Goku SSJ4|green|1| |Goku en la ultima tranformacion|3|2|5500|1|Poder,Saiyajin
+CHARACTER|Goku Infantil|blue|1| |Goku en su infancia.|0|0|1500|1|Inutil,Saiyajin
+CHARACTER|Kid Buu|red|1| |Buu|2|2|4000|1|Maldad,Majin
+CHARACTER|Goku Kaioken|green|1| |Goku con el kaioken activado|1|1|2000|1|Agil,Saiyajin
+CHARACTER|Cell Semiperfecto|green|1| |Cell luego de absorber $al andriode 17|2|1|2100|1|Maldad,Experimento
+CHARACTER|Cell perfecto|red|1| |Cell en su forma perfecta luego de $absorber a n°18|0|1|2500|1|Maldad,Experimento
 EVENT|Heroine rush|blue|0| |Otro diferente|0|0
 EVENT|Heroine rush|blue|0| |Otro diferente|0|0
 EVENT|Heroine rush|blue|0| |Otro diferente|0|0
