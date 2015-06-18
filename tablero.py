@@ -703,7 +703,6 @@ class TableroJuego(object):
         """
         for habilidad,jugador,continuidad in self.habilidades:
             habilidad.aplicar_en_tablero(self,jugador)
-            
 
     def terminar_turno(self):
         """
@@ -720,9 +719,6 @@ class TableroJuego(object):
             if continuidad == EFECTO_TEMPORAL:
                 #Si la habilidad es temporal, la remuevo de la lista.
                 self.habilidades.remove(self.habilidades[index])
-            
-        
-
 
     def aplicar_habilidades_en_carta(self, card):
         """
@@ -734,7 +730,6 @@ class TableroJuego(object):
         for habilidad in self.habilidades:
             habilidad.aplicar_en_carta(card)
 
-
     def aplicar_habilidad_sobre_tablero(self, jugador, habilidad, continuidad):
         """
         Aplica la habilidad pasada por parametro al campo del jugador pasado.
@@ -745,9 +740,8 @@ class TableroJuego(object):
         :return: No tiene valor de retorno.
         """
         if habilidad != None:
-            self.habilidades.append(habilidad,jugador,continuidad)
+            self.habilidades.append(habilidad,jugador,continuidad, interfaz)
             habilidad.aplicar_en_tablero(self,jugador)
-            
 
     def revertir_habilidades_sobre_carta(self, carta):
         """
@@ -757,7 +751,6 @@ class TableroJuego(object):
         """
         for habilidad,jugador,continuidad in reversed(self.habilidades):
             habilidad.revertir_en_carta(card)
-
 
     def remover_habilidad(self, jugador, habilidad):
         """

@@ -21,7 +21,7 @@ class Habilidad(object):
         """
         pass
 
-    def aplicar_en_tablero(self, tablero, jugador):
+    def aplicar_en_tablero(self, tablero, jugador, interfaz):
         """
         Aplica el efecto de la habilidad de la carta del jugador pasado por parametro en el tablero de juego dado.
         Este metodo es llamado al jugar la carta que tiene la habilidad, por lo que siempre debe implementarse.

@@ -13,7 +13,7 @@ class Habilidad_DestruirCartaPorDado(Habilidad):
     def __init__(self):
         pass
 
-    def aplicar_en_tablero(self, tablero, jugador):
+    def aplicar_en_tablero(self, tablero, jugador, interfaz):
         """
         Aplica la habilidad en el tablero pasado por parametro, a todas las cartas del campo frontal y la retaguardia.
         :param tablero: TableroJuego sobre el que se aplica la habilidad.
@@ -22,7 +22,7 @@ class Habilidad_DestruirCartaPorDado(Habilidad):
         :return: No tiene valor de retorno.
         """
         
-        resultado_dado = randrange(1,6)
+        resultado_dado = interfaz.lanzar_dado()
         print resultado_dado
         if pos_de_campo < 4:
             victima = jugador

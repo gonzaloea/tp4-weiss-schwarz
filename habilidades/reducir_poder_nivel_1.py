@@ -17,7 +17,7 @@ class Habilidad_ReducirPoderNivel1(Habilidad):
         if carta.obtener_nivel() == 1:
             carta.establecer_poder(carta.obtener_poder() - self.modificador)
 
-    def aplicar_en_tablero(self, tablero, jugador):
+    def aplicar_en_tablero(self, tablero, jugador, interfaz):
         """
         Aplica la habilidad en el tablero pasado por parametro, a todas las cartas del campo frontal y la retaguardia.
         :param tablero: TableroJuego sobre el que se aplica la habilidad.

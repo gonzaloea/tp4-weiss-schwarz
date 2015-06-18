@@ -46,7 +46,7 @@ class Habilidad_AumentoPoderSubtipo(Habilidad):
         if isinstance(carta, CartaPersonaje) and self.subtipo in carta.obtener_subtipos():
             carta.establecer_poder(carta.obtener_poder() - self.aumento)
 
-    def revertir_en_tablero(self, tablero, jugador):
+    def revertir_en_tablero(self, tablero, jugador, interfaz):
         """
         Revierte el efecto de la habilidad en el tablero pasado por parametro, volviendo las cartas afectadas al estado
         que tenian antes de aplicarla.
