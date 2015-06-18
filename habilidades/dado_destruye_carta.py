@@ -1,15 +1,17 @@
-from habilidades.habilidad import Habilidad
+import os.path, sys
+sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir))
+from habilidad import Habilidad
 from random import randrange
-from tablero import POSICIONES_CAMPO_FRONTAL, CAMPO_FRONTAL
+import tablero as imp_t
 NOMBRE_HABILIDAD = "Destruir carta por dado"
-#A6 Lanza un dado; destruye un personaje en la zona frontal seg´un el n´umero
+#A6 Lanza un dado; destruye un personaje en la zona frontal segun el numero
 #que salga. 1, 2, 3 corresponden al campo propio; 4, 5, 6 al enemigo.
 class Habilidad_DestruirCartaPorDado(Habilidad):
     """ Habilidad que lanza un dado y destruye una carta de alguna de las zonas frontales. 
     1, 2, 3 corresponden al campo propio; 4, 5, 6 al enemigo."""
 
     def __init__(self):
-        
+        pass
 
     def aplicar_en_tablero(self, tablero, jugador):
         """
@@ -24,11 +26,11 @@ class Habilidad_DestruirCartaPorDado(Habilidad):
         print resultado_dado
         if pos_de_campo < 4:
             victima = jugador
-            campo = POSICIONES_CAMPO_FRONTAL[resultado_dado - 1]
+            campo = imp_t.POSICIONES_CAMPO_FRONTAL[resultado_dado - 1]
         else:
             victima = tablero.obtener_oponente(jugador)
-            campo = POSICIONES_CAMPO_FRONTAL[resultado_dado - 4]
-        tablero.remover_carta(victima, CAMPO_FRONTAL ,campo)
+            campo = imp_t.POSICIONES_CAMPO_FRONTAL[resultado_dado - 4]
+        tablero.remover_carta(victima, imp_t.CAMPO_FRONTAL ,campo)
 
     def obtener_texto(self):
         """

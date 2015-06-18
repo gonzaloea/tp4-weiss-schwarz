@@ -1,7 +1,5 @@
 # coding=utf-8
 import random
-
-from mazo import Mazo
 from carta import CartaClimax, CartaPersonaje, CartaEvento
 
 BENEFICIO_AUMENTAR_CLOCK = 2
@@ -714,7 +712,7 @@ class TableroJuego(object):
         para ser aplicadas en el proximo turno (en el mismo orden en el que se aplicaron en este turno).
         :return: No tiene tipo de retorno.
         """
-         index_iter = xrange(len(self.habilidades))
+        index_iter = xrange(len(self.habilidades))
         for index in reversed(index_iter):
             #itero en reversa para darle efecto de pila
             habilidad_activa,jugador,continuidad = self.habilidades[index]
@@ -733,7 +731,7 @@ class TableroJuego(object):
         :param carta: Carta sobre la que aplicar las habilidades.
         :return: No tiene valor de retorno.
         """
-        for habilidad in self.habilidades_activas:
+        for habilidad in self.habilidades:
             habilidad.aplicar_en_carta(card)
 
 
@@ -778,5 +776,5 @@ class TableroJuego(object):
                 #si encuentro la habilidad pasada por param, luego de revertirla, la saco de la lista.
                 self.habilidades.remove(self.habilidades[index])
         #Aplico todas las habilidades nuevamente.
-        for habilidad_activa,jugador,continuidad in self.habilidad:
+        for habilidad_activa,jugador,continuidad in self.habilidades:
             habilidad_activa.aplicar_en_tablero(self,jugador)

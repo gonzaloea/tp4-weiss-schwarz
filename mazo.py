@@ -1,6 +1,7 @@
 import random
 from carta import CartaPersonaje, CartaEvento, CartaClimax
 import habilidades
+from habilidades import *
 
 LIMITE_CARTAS_MAZO = 41
 LIMITE_COPIAS_CARTA = 4
@@ -29,6 +30,7 @@ def generar_diccionario_habilidades():
     lista_habilidades = {}
     for modulo in [habilidades.__getattribute__(x) for x in dir(habilidades) if x[0] != "_"]:
         lista_habilidades[modulo.NOMBRE_HABILIDAD] = modulo.obtener_habilidad
+
     return lista_habilidades
 
 
@@ -67,8 +69,10 @@ class Mazo(object):
             color = campos[COLOR]
             efecto_extra = int(campos[EFECTO_EXTRA])
             habilidad = None
+
             if lista_habilidades.has_key(campos[HABILIDAD]):
                 habilidad = lista_habilidades[campos[HABILIDAD]]()
+                
             texto_decorativo = campos[TEXTO_DECORATIVO].replace("$", "\n")
 
             cartas_cargadas[nombre_carta] = cartas_cargadas.get(nombre_carta, 0) + 1

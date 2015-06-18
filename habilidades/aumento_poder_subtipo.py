@@ -84,4 +84,4 @@ def obtener_habilidad():
     Devuelve una instancia de la habilidad AumentoPoderSubtipo.
     :return: Una nueva instancia de la clase Habilidad_AumentoPoderSubtipo.
     """
-    return TemplateHabilidad()
+    return Habilidad_AumentoPoderSubtipo()

@@ -1,2 +1,5 @@
-__all__ = ["reducir_poder_1", "dado_destruye_carta", "aumento_poder_subtipo"]
+__all__ = []
+__all__ += ["reducir_poder_nivel_1"]
+__all__ += ["dado_destruye_carta"]
+__all__ += ["aumento_poder_subtipo"]
 
