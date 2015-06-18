@@ -181,11 +181,14 @@ class _CampoJugador(object):
         :return: Lista con las cartas que se robaron del mazo.
         """
         cartas_robadas = []
-        while (not self.mazo.esta_vacio()) and (cantidad > len(cartas_robadas)):
-            cartas_robadas.append(self.mazo.robar_carta())
-
+        
         if self.mazo.esta_vacio():
             self.recargar_mazo()
+        
+        while (not self.mazo.esta_vacio()) and (cantidad > len(cartas_robadas)):
+            cartas_robadas.append(self.mazo.robar_carta())
+            if self.mazo.esta_vacio():
+                self.recargar_mazo()
 
         return cartas_robadas
 
@@ -427,7 +430,7 @@ class TableroJuego(object):
         turnos anteriores) y la referencia a la interfaz grafica. Ejecuta y resuelve las acciones efectuadas por los
         jugadores y las fases del juego (robar cartas, poner en el campo, combate, etc.)."""
 
-    def __init__(self, interfaz, mazo_weiss, mazo_schwarz):
+    def __init__(self, interfaz=None, mazo_weiss=None, mazo_schwarz=None):
         """
         :param interfaz: Refencia a la interfaz grafica.
         :param mazo_*: Referencia a un mazo
@@ -441,7 +444,7 @@ class TableroJuego(object):
         self.habilidades_activas=[]
         self.habilidades_continuas={WEISS:[],SCHWARZ:[]}
         self.habilidades_temporales={WEISS:[],SCHWARZ:[]}
-
+    
     def obtener_oponente(self, jugador):
         """
         Devuelve el oponente del jugador pasado por parametro.
@@ -518,11 +521,14 @@ class TableroJuego(object):
             return False
         elif isinstance(carta, CartaEvento):
             if self.jugar_evento(jugador, carta):
+                
+                print carta.obtener_habilidad() + " EVENT"
                 self.aplicar_habilidad_sobre_tablero(jugador, carta.obtener_habilidad(), EFECTO_TEMPORAL)
                 return True
             return False
         elif isinstance(carta, CartaClimax):
             if self.jugar_climax(jugador, carta):
+                carta.obtener_habilidad() + " Climax"
                 self.aplicar_habilidad_sobre_tablero(jugador, carta.obtener_habilidad(), EFECTO_TEMPORAL)
                 return True
             return False
@@ -702,6 +708,7 @@ class TableroJuego(object):
         en el mismo orden que fueron aplicado en este.
         :return: No tiene valor de retorno.
         """
+        print self.habilidades_activas
         for habilidad in self.habilidades_activas:
             if habilidad in self.habilidades_continuas[WEISS]:
                 jugador = WEISS
@@ -758,12 +765,13 @@ class TableroJuego(object):
         :return: No tiene valor de retorno.
         """
         if habilidad is None:
-			return
+            return
         if continuidad is EFECTO_CONTINUO:
             self.habilidades_continuas[jugador].append(habilidad)
+            self.habilidades_activas.append(habilidad)
         else:
             self.habilidades_temporales[jugador].append(habilidad)
-        self.habilidades_activas.append(habilidad)
+
         habilidad.aplicar_en_tablero(self,jugador)
             
 
@@ -784,20 +792,23 @@ class TableroJuego(object):
         :param habilidad: Habilidad a deshacer. Debe ser un objeto de una clase que herede de Habilidad.
         :return: No tiene valor de retorno.
         """
+        #Desactivo todas las habilidades
         for habilidad_activa in reversed(self.habilidades_activas):
             if habilidad_activa in self.habilidades_continuas[WEISS] or habilidad_activa in self.habilidades_temporales[WEISS]:
                 jugador = WEISS
             else:
                 jugador = SCHWARZ
             habilidad_activa.revertir_en_tablero(self, jugador)
-        self.habilidades_activas.remove(habilidad)
-        if habilidad in self.habilidades_continuas.itervalues():
-            self.habilidades_continuas[jugador].remove(habilidad)
-        else:
+        #Borro como corresponda
+        if habilidad in self.habilidades_temporales.itervalues():
             self.habilidades_temporales[jugador].remove(habilidad)
-        for habilidad_a_activar in self.habilidades_activas:
+        elif habilidad in self.habilidades_continuas.itervalues():
+            self.habilidades_continuas[jugador].remove(habilidad)
+            self.habilidades_activas.remove(habilidad)
+        #Reactivo las habilidades
+        for habilidad_desactivada in self.habilidades_activas:
             if habilidad_activa in self.habilidades_continuas[WEISS] or habilidad_activa in self.habilidades_temporales[WEISS]:
                 jugador = WEISS
             else:
                 jugador = SCHWARZ
-            habilidad_a_activar.aplicar_en_tablero(self,jugador)
+            habilidad_activa.aplicar_en_tablero(self, jugador)

@@ -76,6 +76,9 @@ class Habilidad(object):
         :return: String con el texto completo de la habilidad.
         """
         pass
+    
+    def __str__(self):
+        return self.obtener_texto()
 
 def obtener_habilidad():
     """

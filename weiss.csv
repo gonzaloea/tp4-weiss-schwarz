@@ -1,20 +1,41 @@
-CHARACTER|Bride Saber|green|2| |Decorativo$Y que decorativo es$No?|0|0|20000|1|Tipo1,Tipo2
-CHARACTER|Gohan SSJ2|blue|2| |Gohan en la pelea con cell$ donde alcanza esta transformación.|1|1|3000|1|Tipo1,Tipo2
-CHARACTER|Gohan SSJ2|blue|2| |Gohan en la pelea con cell$ donde alcanza esta transformación.|1|1|3000|1|Tipo1,Tipo2
-CHARACTER|Freezer|red|1| |Freezer en su ultima transformación|2|1|4000|1|Tipo1,Tipo2
-CHARACTER|Freezer|red|1| |Freezer en su ultima transformación|2|1|4000|1|Tipo1,Tipo2
-CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|1|2500|1|Maldad,Saiyajin
-CHARACTER|Goku SSJ4|green|1| |Goku en la ultima tranformacion|3|2|5500|1|Poder,Saiyajin
-CHARACTER|Goku Infantil|blue|1| |Goku en su infancia.|0|0|1500|1|Inutil,Saiyajin
-CHARACTER|Kid Buu|red|1| |Buu|2|2|4000|1|Maldad,Majin
-CHARACTER|Goku Kaioken|green|1| |Goku con el kaioken activado|1|1|2000|1|Agil,Saiyajin
-CHARACTER|Cell Semiperfecto|green|1| |Cell luego de absorber $al andriode 17|2|1|2100|1|Maldad,Experimento
-CHARACTER|Cell perfecto|red|1| |Cell en su forma perfecta luego de $absorber a n°18|0|1|2500|1|Maldad,Experimento
-EVENT|Heroine rush|blue|0| |Otro diferente|0|0
-EVENT|Heroine rush|blue|0| |Otro diferente|0|0
-EVENT|Heroine rush|blue|0| |Otro diferente|0|0
-EVENT|Heroine rush|blue|0| |Otro diferente|0|0
-CLIMAX|A fated encounter|red|1| |Y uno ultimo distinto
-CLIMAX|A fated encounter|red|1| |Y uno ultimo distinto
-CLIMAX|A fated encounter|red|1| |Y uno ultimo distinto
-CLIMAX|A fated encounter|red|1| |Y uno ultimo distinto
+CHARACTER|Gohan SSJ2|blue|2| |Gohan en la pelea con cell$ donde alcanza esta transformación.|1|0|2750|1|Luchador,Saiyajin
+CHARACTER|Gohan SSJ2|blue|2| |Gohan en la pelea con cell$ donde alcanza esta transformación.|1|0|2750|1|Luchador,Saiyajin
+CHARACTER|Freezer|red|1| |Freezer en su ultima transformación|1|0|4000|1|Changlong, Maligno
+CHARACTER|Freezer|red|1| |Freezer en su ultima transformación|1|0|4000|1|Changlong, Maligno
+CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Maligno,Saiyajin
+CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Maligno,Saiyajin
+CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Maligno,Saiyajin
+CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Maligno,Saiyajin
+CHARACTER|Goku SSJ4|green|1| |Goku en la ultima tranformacion|3|1|5500|2|Definitivo,Saiyajin
+CHARACTER|Goku Infantil|blue|0| |Goku en su infancia.|0|0|500|1|Inutil,Saiyajin
+CHARACTER|Goku Infantil|blue|0| |Goku en su infancia.|0|0|500|1|Inutil,Saiyajin
+CHARACTER|Goku Infantil|blue|0| |Goku en su infancia.|0|0|500|1|Inutil,Saiyajin
+CHARACTER|Goku Infantil|blue|0| |Goku en su infancia.|0|0|500|1|Inutil,Saiyajin
+CHARACTER|Kid Buu|red|1| |Buu|2|0|3500|1|Maligno,Majin
+CHARACTER|Goku Kaioken|red|0| |Goku con el kaioken activado|0|0|1550|1|Luchador,Saiyajin
+CHARACTER|Goku Kaioken|red|0| |Goku con el kaioken activado|0|0|1550|1|Luchador,Saiyajin
+CHARACTER|Goku Kaioken|red|0| |Goku con el kaioken activado|0|0|1550|1|Luchador,Saiyajin
+CHARACTER|Goku Kaioken|red|0| |Goku con el kaioken activado|0|0|1550|1|Luchador,Saiyajin
+CHARACTER|Cell Semiperfecto|green|1| |Cell luego de absorber $al andriode 17|1|1|2100|1|Maligno,Experimento
+CHARACTER|Cell perfecto|red|2| |Cell en su forma perfecta luego de $absorber a n°18|2|1|2700|1|Luchador,Experimento
+CHARACTER|Cell Imperfecto|blue|0| |Cell recien salido del capullo.|0|0|1500|1|Maldad,Experimento
+CHARACTER|Cell Imperfecto|blue|0| |Cell recien salido del capullo.|0|0|1500|1|Maldad,Experimento
+CHARACTER|Cell Imperfecto|blue|0| |Cell recien salido del capullo.|0|0|1500|1|Maldad,Experimento
+CHARACTER|Baby Vegeta|red|2| |Vegeta poseido por el alien Baby.|3|1|5400|2|Tsufur,Saiyajin
+CHARACTER|Gogeta SSJ4|blue|2| |Vegeta y Goku fusionados en fase SSJ4|3|2|8000|1|Fusion,Saiyajin
+CHARACTER|Majin Buu|green|0| |Buu en la forma mas inofensiva.|1|0|3000|1|Ingenuo,Majin
+CHARACTER|Majin Buu|green|0| |Buu en la forma mas inofensiva.|1|0|3000|1|Ingenuo,Majin
+CHARACTER|Majin Vegeta|blue|1| |Vegeta poesido por el poder maligno majin|1|0|2900|1|Majin,Saiyajin
+CHARACTER|Omega Shenron|red|2| |Omega shenron luego de reunir las 7 esferas|3|2|7500|1|Definitivo,Maligno
+CHARACTER|Yayirobe|green|0| |Inutil Yajirobe|0|0|400|1|Inutil,Humano
+CHARACTER|Yayirobe|green|0| |Inutil Yajirobe|0|0|400|1|Inutil,Humano
+CHARACTER|Yayirobe|green|0| |Inutil Yajirobe|0|0|400|1|Inutil,Humano
+CHARACTER|Yayirobe|green|0| |Inutil Yajirobe|0|0|400|1|Inutil,Humano
+EVENT|Genkidama|blue|0|dado_destruye_carta|Lanza un dado. Si sale 1,2 o 3 destruye una de tu campo.$Si sale 4,5 o 6 destruye una de su campo.|0|0
+EVENT|Genkidama|blue|0|dado_destruye_carta|Lanza un dado. Si sale 1,2 o 3 destruye una de tu campo.$Si sale 4,5 o 6 destruye una de su campo.|0|0
+EVENT|Genkidama|blue|0|dado_destruye_carta|Lanza un dado. Si sale 1,2 o 3 destruye una de tu campo.$Si sale 4,5 o 6 destruye una de su campo.|0|0
+EVENT|Genkidama|blue|0|dado_destruye_carta|Lanza un dado. Si sale 1,2 o 3 destruye una de tu campo.$Si sale 4,5 o 6 destruye una de su campo.|0|0
+CLIMAX|Ring de Cell|red|1|aumento_poder_subtipo|El ring donde se lleva a cabo el torneo de artes marciales de cell
+CLIMAX|Ring de Cell|red|1|aumento_poder_subtipo|El ring donde se lleva a cabo el torneo de artes marciales de cell
+CLIMAX|Ring de Cell|red|1|aumento_poder_subtipo|El ring donde se lleva a cabo el torneo de artes marciales de cell
+CLIMAX|Ring de Cell|red|1|aumento_poder_subtipo|El ring donde se lleva a cabo el torneo de artes marciales de cell

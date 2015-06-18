@@ -3,6 +3,9 @@ import random
 from tablero import TableroJuego
 import tablero
 import creador_cartas
+from mazo import Mazo
+MAZO_SCHWARZ = "schwarz.csv"
+MAZO_WEISS = "weiss.csv"
 
 def clocking(gameboard, player_hand , side):
     print "Choose a card to play:"
@@ -54,7 +57,7 @@ def play_character(gameboard, player_hand, side):
 def simulate_game():
     """  """
     # Board creation
-    gameboard = TableroJuego()
+    gameboard = TableroJuego(None, Mazo(MAZO_WEISS), Mazo(MAZO_SCHWARZ))
 
     # Init
     player1_hand = gameboard.robar_cartas(tablero.WEISS, 5)

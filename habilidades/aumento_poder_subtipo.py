@@ -1,21 +1,22 @@
 from habilidades.habilidad import Habilidad
 
-NOMBRE_HABILIDAD = "Reducir Poder Nivel 1"
+NOMBRE_HABILIDAD = "aumento_poder_subtipo"
 
-class Habilidad_ReducirPoderNivel1(Habilidad):
-    """ Habilidad que reduce el poder de todas las cartas nivel 1 hasta el final del turno. """
 
+class Habilidad_AumentoPoderSubtipo(Habilidad):
+    """ Habilidad que aumenta el poder de todas las cartas del subtipo especificado mientras la carta permanezca en campo. """
     def __init__(self):
-        self.modificador = 1000
+        self.aumento = 1500
+        self.subtipo = "Luchador"
 
     def aplicar_en_carta(self, carta):
         """
-        Aplica el modificador restando al poder de la carta pasada por parametro, si esta es nivel 1.
-        :param carta: Carta a la que se quiere aplicar el modificador.
+        Aplica el aumento al poder de la carta pasada por parametro, si esta coincide con el subtipo de la haibilidad.
+        :param carta: Carta a la que se quiere aplicar el aumento.
         :return: No tiene valor de retorno.
         """
-        if carta.obtener_nivel() == 1:
-            carta.establecer_poder(carta.obtener_poder() - self.modificador)
+        if isinstance(carta, CartaPersonaje) and self.subtipo in carta.obtener_subtipos():
+            carta.establecer_poder(carta.obtener_poder() + self.aumento)
 
     def aplicar_en_tablero(self, tablero, jugador):
         """
@@ -36,31 +37,14 @@ class Habilidad_ReducirPoderNivel1(Habilidad):
             print carta
             self.aplicar_en_carta(carta)
 
-    def obtener_texto(self):
-        """
-        Devuelve el texto completo de la descripcion de la habilidad.
-        :return: String que contiene la descripcion de la habilidad.
-        """
-        texto = self._obtener_texto_base()
-        texto += "Reduce los puntos de ataque de los personajes nivel 1 en " + str(self.modificador) + \
-                 " hasta el final del turno."
-        return texto
-
-    def obtener_nombre(self):
-        """
-        Devuelve el nombre completo de la habilidad, que corresponde a la constante NOMBRE_HABILIDAD.
-        :return: String que contiene el nombre de la habilidad.
-        """
-        return NOMBRE_HABILIDAD
-
     def revertir_en_carta(self, carta):
         """
-        Revierte el efecto, aumentando el poder de la carta pasada por parametro.
+        Revierte el efecto, disminuyendo el poder de la carta pasada por parametro del subtipo de la clase.
         :param carta: Carta sobre la que se desea revertir el efecto de la habilidad.
         :return: No tiene valor de retorno.
         """
-        if carta.obtener_nivel() == 1:
-            carta.establecer_poder(carta.obtener_poder() + self.modificador)
+        if isinstance(carta, CartaPersonaje) and self.subtipo in carta.obtener_subtipos():
+            carta.establecer_poder(carta.obtener_poder() - self.aumento)
 
     def revertir_en_tablero(self, tablero, jugador):
         """
@@ -80,10 +64,24 @@ class Habilidad_ReducirPoderNivel1(Habilidad):
                 continue
             self.revertir_en_carta(carta)
 
+    def obtener_nombre(self):
+        return NOMBRE_HABILIDAD
+
+    def obtener_texto(self):
+        """
+        Devuelve el texto completo de la descripcion de la habilidad.
+        :return: String que contiene la descripcion de la habilidad.
+        """
+        texto = self._obtener_texto_base()
+        texto += "Aumenta los puntos de poder de las cartas del subtipo "+str(self.subtipo)+" en "
+        texto += str(self.aumento)+"puntos mientras la carta permanezca en el campo"
+        return texto
+
+
 
 def obtener_habilidad():
     """
-    Devuelve una instancia de la habilidad ReducirPoder1000.
-    :return: Una nueva instancia de la clase Habilidad_ReducirPoderNivel1.
+    Devuelve una instancia de la habilidad AumentoPoderSubtipo.
+    :return: Una nueva instancia de la clase Habilidad_AumentoPoderSubtipo.
     """
-    return Habilidad_ReducirPoderNivel1()
+    return TemplateHabilidad()

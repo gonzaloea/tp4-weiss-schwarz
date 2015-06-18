@@ -124,7 +124,6 @@ def generar_imagen_personaje(carta):
 
     return resultado
 
-
 def generar_imagen_evento(carta):
     """
     Genera la imagen para una carta de evento y la devuelve.
@@ -227,7 +226,6 @@ def generar_imagen_evento(carta):
 
     return resultado
 
-
 def generar_imagen_climax(carta):
     """
     Genera la imagen para una carta de climax y la devuelve.
@@ -324,7 +322,6 @@ def generar_imagen_climax(carta):
 
     return pygame.transform.rotate(resultado, -90)
 
-
 def generar_imagen_carta(carta):
     """
     Genera la imagen para la carta pasada por parametro y la devuelve.
@@ -339,7 +336,6 @@ def generar_imagen_carta(carta):
         return generar_imagen_evento(carta)
     else:
         raise TypeError, "No es una carta, no se generar una imagen"
-
 
 def mostrar_carta(carta, texto="", tiempo=2):
     """

@@ -1,2 +1,2 @@
-__all__ = []
-__all__ += ["reducir_poder_1"]  #esto es solo el nombre del .py
+__all__ = ["reducir_poder_1", "dado_destruye_carta", "aumento_poder_subtipo"]
+
