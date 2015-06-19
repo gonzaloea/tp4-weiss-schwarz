@@ -745,7 +745,7 @@ class TableroJuego(object):
         if habilidad != None:
             print habilidad.obtener_nombre()
             self.habilidades.append((habilidad,jugador,continuidad))
-            habilidad.aplicar_en_tablero(self,jugador,self.interfaz)
+            habilidad.aplicar_en_tablero(self,jugador)
 
     def revertir_habilidades_sobre_carta(self, carta):
         """
@@ -774,4 +774,12 @@ class TableroJuego(object):
                 self.habilidades.remove(self.habilidades[index])
         #Aplico todas las habilidades nuevamente.
         for habilidad_activa,jugador,continuidad in self.habilidades:
-            habilidad_activa.aplicar_en_tablero(self,jugador,self.interfaz)
+            habilidad_activa.aplicar_en_tablero(self,jugador)
+
+    def obtener_interfaz(self):
+        """
+        Devuelve una referencia al atributo de la clase interfaz
+        :return: interfaz
+        """
+        return self.interfaz
+        

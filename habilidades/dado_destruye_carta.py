@@ -13,7 +13,7 @@ class Habilidad_DestruirCartaPorDado(Habilidad):
     def __init__(self):
         pass
 
-    def aplicar_en_tablero(self, tablero, jugador, interfaz):
+    def aplicar_en_tablero(self, tablero, jugador):
         """
         Aplica la habilidad en el tablero pasado por parametro, a todas las cartas del campo frontal y la retaguardia.
         :param tablero: TableroJuego sobre el que se aplica la habilidad.
@@ -22,7 +22,7 @@ class Habilidad_DestruirCartaPorDado(Habilidad):
         :return: No tiene valor de retorno.
         """
         
-        resultado_dado = interfaz.lanzar_dado()
+        resultado_dado = tablero.obtener_interfaz().lanzar_dado()
 
         if resultado_dado < 4:
             victima = tablero.obtener_oponente(jugador)
@@ -33,10 +33,10 @@ class Habilidad_DestruirCartaPorDado(Habilidad):
         for carta in cartas:
             if carta != None:
                 tablero.remover_carta(victima, imp_t.CAMPO_FRONTAL ,cartas.index(carta))
-                interfaz.mostrar_informacion(str(carta), "Carta destruida")
+                tablero.obtener_interfaz().mostrar_informacion(str(carta), "Carta destruida")
                 break
         if carta == None:
-            interfaz.mostrar_informacion("No hay cartas.", "Carta destruida")
+            tablero.obtener_interfaz().mostrar_informacion("No hay cartas.", "Carta destruida")
 
     def obtener_texto(self):
         """

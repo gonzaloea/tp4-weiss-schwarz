@@ -18,7 +18,7 @@ class Habilidad_AumentoPoderSubtipo(Habilidad):
         if isinstance(carta, CartaPersonaje) and self.subtipo in carta.obtener_subtipos():
             carta.establecer_poder(carta.obtener_poder() + self.aumento)
 
-    def aplicar_en_tablero(self, tablero, jugador, interfaz):
+    def aplicar_en_tablero(self, tablero, jugador):
         """
         Aplica la habilidad en el tablero pasado por parametro, a todas las cartas del campo frontal y la retaguardia.
         :param tablero: TableroJuego sobre el que se aplica la habilidad.
