@@ -1,4 +1,5 @@
 from habilidades.habilidad import Habilidad
+from carta import CartaPersonaje
 
 NOMBRE_HABILIDAD = "Aumento poder a subtipo"
 
@@ -16,6 +17,7 @@ class Habilidad_AumentoPoderSubtipo(Habilidad):
         :return: No tiene valor de retorno.
         """
         if isinstance(carta, CartaPersonaje) and self.subtipo in carta.obtener_subtipos():
+			print carta
             carta.establecer_poder(carta.obtener_poder() + self.aumento)
 
     def aplicar_en_tablero(self, tablero, jugador):
@@ -34,7 +36,6 @@ class Habilidad_AumentoPoderSubtipo(Habilidad):
         for carta in cartas:
             if not carta:
                 continue
-            print carta
             self.aplicar_en_carta(carta)
 
     def revertir_en_carta(self, carta):
@@ -46,7 +47,7 @@ class Habilidad_AumentoPoderSubtipo(Habilidad):
         if isinstance(carta, CartaPersonaje) and self.subtipo in carta.obtener_subtipos():
             carta.establecer_poder(carta.obtener_poder() - self.aumento)
 
-    def revertir_en_tablero(self, tablero, jugador, interfaz):
+    def revertir_en_tablero(self, tablero, jugador):
         """
         Revierte el efecto de la habilidad en el tablero pasado por parametro, volviendo las cartas afectadas al estado
         que tenian antes de aplicarla.

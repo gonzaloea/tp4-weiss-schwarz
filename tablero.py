@@ -704,6 +704,7 @@ class TableroJuego(object):
         en el mismo orden que fueron aplicado en este.
         :return: No tiene valor de retorno.
         """
+        print "empieza turno: "+str(self.habilidades)
         for habilidad,jugador,continuidad in self.habilidades:
             habilidad.aplicar_en_tablero(self,jugador)
 
@@ -714,6 +715,7 @@ class TableroJuego(object):
         para ser aplicadas en el proximo turno (en el mismo orden en el que se aplicaron en este turno).
         :return: No tiene tipo de retorno.
         """
+        print "termina turno: "+str(self.habilidades)
         index_iter = xrange(len(self.habilidades))
         for index in reversed(index_iter):
             #itero en reversa para darle efecto de pila
@@ -721,7 +723,7 @@ class TableroJuego(object):
             habilidad_activa.revertir_en_tablero(self,jugador)
             if continuidad == EFECTO_TEMPORAL:
                 #Si la habilidad es temporal, la remuevo de la lista.
-                self.habilidades.remove(self.habilidades[index])
+                self.habilidades.pop(index)
 
     def aplicar_habilidades_en_carta(self, card):
         """
@@ -730,7 +732,7 @@ class TableroJuego(object):
         :param carta: Carta sobre la que aplicar las habilidades.
         :return: No tiene valor de retorno.
         """
-        for habilidad in self.habilidades:
+        for habilidad,jugador,continuidad in self.habilidades:
             habilidad.aplicar_en_carta(card)
 
     def aplicar_habilidad_sobre_tablero(self, jugador, habilidad, continuidad):
@@ -743,7 +745,6 @@ class TableroJuego(object):
         :return: No tiene valor de retorno.
         """
         if habilidad != None:
-            print habilidad.obtener_nombre()
             self.habilidades.append((habilidad,jugador,continuidad))
             habilidad.aplicar_en_tablero(self,jugador)
 
@@ -764,17 +765,18 @@ class TableroJuego(object):
         :return: No tiene valor de retorno.
         """
         #Creo el iterador de indices de acuerdo al largo de la lista
-        index_iter = xrange(len(self.habilidades))
-        for index in reversed(index_iter):
-            #itero en reversa para darle efecto de pila
-            habilidad_activa,jugador,continuidad = self.habilidades[index]
-            habilidad_activa.revertir_en_tablero(self,jugador)
-            if habilidad == habilidad_activa:
-                #si encuentro la habilidad pasada por param, luego de revertirla, la saco de la lista.
-                self.habilidades.remove(self.habilidades[index])
-        #Aplico todas las habilidades nuevamente.
-        for habilidad_activa,jugador,continuidad in self.habilidades:
-            habilidad_activa.aplicar_en_tablero(self,jugador)
+        if habilidad != None:
+            index_iter = xrange(len(self.habilidades))
+            for index in reversed(index_iter):
+                #itero en reversa para darle efecto de pila
+                habilidad_activa,jugador,continuidad = self.habilidades[index]
+                habilidad_activa.revertir_en_tablero(self,jugador)
+                if habilidad == habilidad_activa:
+                    #si encuentro la habilidad pasada por param, luego de revertirla, la saco de la lista.
+                    self.habilidades.remove(self.habilidades[index])
+            #Aplico todas las habilidades nuevamente.
+            for habilidad_activa,jugador,continuidad in self.habilidades:
+                habilidad_activa.aplicar_en_tablero(self,jugador)
 
     def obtener_interfaz(self):
         """

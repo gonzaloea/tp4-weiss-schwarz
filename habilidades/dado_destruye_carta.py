@@ -1,5 +1,3 @@
-import os.path, sys
-sys.path.append(os.path.join(os.path.dirname(os.path.realpath(__file__)), os.pardir))
 from habilidad import Habilidad
 from random import randrange
 import tablero as imp_t
@@ -36,7 +34,7 @@ class Habilidad_DestruirCartaPorDado(Habilidad):
                 tablero.obtener_interfaz().mostrar_informacion(str(carta), "Carta destruida")
                 break
         if carta == None:
-            tablero.obtener_interfaz().mostrar_informacion("No hay cartas.", "Carta destruida")
+            tablero.obtener_interfaz()).mostrar_informacion("No hay cartas.", "Carta destruida")
 
     def obtener_texto(self):
         """

@@ -35,8 +35,8 @@ EVENT|Genkidama|blue|0|Destruir carta por dado|Lanza un dado. Si sale 1,2 o 3 de
 EVENT|Genkidama|blue|0|Destruir carta por dado|Lanza un dado. Si sale 1,2 o 3 destruye una de tu campo.$Si sale 4,5 o 6 destruye una de su campo.|0|0
 EVENT|Genkidama|blue|0|Destruir carta por dado|Lanza un dado. Si sale 1,2 o 3 destruye una de tu campo.$Si sale 4,5 o 6 destruye una de su campo.|0|0
 EVENT|Genkidama|blue|0|Destruir carta por dado|Lanza un dado. Si sale 1,2 o 3 destruye una de tu campo.$Si sale 4,5 o 6 destruye una de su campo.|0|0
-EVENT|Pilaf y su pandilla|green|0|Reducir Poder Nivel 1| Lanza una moneda; mientras que sea cara, saca una carta$ del mazo del enemigo y la envıa a su zona de descarte.$Se detiene cuando sale cruz o el mazo enemigo esta$ vacıo.|0|0
-EVENT|Pilaf y su pandilla|green|0|Reducir Poder Nivel 1| Lanza una moneda; mientras que sea cara, saca una carta$ del mazo del enemigo y la envıa a su zona de descarte.$Se detiene cuando sale cruz o el mazo enemigo esta$ vacıo.|0|0
+EVENT|Pilaf y su pandilla|green|0|Robar carta lanzando una moneda| Lanza una moneda; mientras que sea cara, saca una carta$ del mazo del enemigo y la envıa a su zona de descarte.$Se detiene cuando sale cruz o el mazo enemigo esta$ vacıo.|0|0
+EVENT|Pilaf y su pandilla|green|0|Robar carta lanzando una moneda| Lanza una moneda; mientras que sea cara, saca una carta$ del mazo del enemigo y la envıa a su zona de descarte.$Se detiene cuando sale cruz o el mazo enemigo esta$ vacıo.|0|0
 CLIMAX|Ring de Cell|red|1|Aumento poder a subtipo|El ring donde se lleva a cabo el torneo de artes marciales de cell
 CLIMAX|Ring de Cell|red|1|Aumento poder a subtipo|El ring donde se lleva a cabo el torneo de artes marciales de cell
 CLIMAX|Ring de Cell|red|1|Aumento poder a subtipo|El ring donde se lleva a cabo el torneo de artes marciales de cell
