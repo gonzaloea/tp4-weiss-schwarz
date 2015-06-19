@@ -512,16 +512,19 @@ class TableroJuego(object):
         """
         if isinstance(carta, CartaPersonaje):
             if self.jugar_personaje(jugador, carta):
+                print carta.obtener_habilidad()
                 self.aplicar_habilidad_sobre_tablero(jugador, carta.obtener_habilidad(), EFECTO_CONTINUO)
                 return True
             return False
         elif isinstance(carta, CartaEvento):
             if self.jugar_evento(jugador, carta):
+                print carta.obtener_habilidad()
                 self.aplicar_habilidad_sobre_tablero(jugador, carta.obtener_habilidad(), EFECTO_TEMPORAL)
                 return True
             return False
         elif isinstance(carta, CartaClimax):
             if self.jugar_climax(jugador, carta):
+                print carta.obtener_habilidad()
                 self.aplicar_habilidad_sobre_tablero(jugador, carta.obtener_habilidad(), EFECTO_TEMPORAL)
                 return True
             return False
@@ -740,8 +743,9 @@ class TableroJuego(object):
         :return: No tiene valor de retorno.
         """
         if habilidad != None:
-            self.habilidades.append(habilidad,jugador,continuidad, interfaz)
-            habilidad.aplicar_en_tablero(self,jugador)
+            print habilidad.obtener_nombre()
+            self.habilidades.append((habilidad,jugador,continuidad))
+            habilidad.aplicar_en_tablero(self,jugador,self.interfaz)
 
     def revertir_habilidades_sobre_carta(self, carta):
         """
@@ -750,7 +754,7 @@ class TableroJuego(object):
         :return: No tiene valor de retorno.
         """
         for habilidad,jugador,continuidad in reversed(self.habilidades):
-            habilidad.revertir_en_carta(card)
+            habilidad.revertir_en_carta(carta)
 
     def remover_habilidad(self, jugador, habilidad):
         """
@@ -770,4 +774,4 @@ class TableroJuego(object):
                 self.habilidades.remove(self.habilidades[index])
         #Aplico todas las habilidades nuevamente.
         for habilidad_activa,jugador,continuidad in self.habilidades:
-            habilidad_activa.aplicar_en_tablero(self,jugador)
+            habilidad_activa.aplicar_en_tablero(self,jugador,self.interfaz)

@@ -1,6 +1,6 @@
 from habilidades.habilidad import Habilidad
 
-NOMBRE_HABILIDAD = "aumento_poder_subtipo"
+NOMBRE_HABILIDAD = "Aumento poder a subtipo"
 
 
 class Habilidad_AumentoPoderSubtipo(Habilidad):
@@ -18,7 +18,7 @@ class Habilidad_AumentoPoderSubtipo(Habilidad):
         if isinstance(carta, CartaPersonaje) and self.subtipo in carta.obtener_subtipos():
             carta.establecer_poder(carta.obtener_poder() + self.aumento)
 
-    def aplicar_en_tablero(self, tablero, jugador):
+    def aplicar_en_tablero(self, tablero, jugador, interfaz):
         """
         Aplica la habilidad en el tablero pasado por parametro, a todas las cartas del campo frontal y la retaguardia.
         :param tablero: TableroJuego sobre el que se aplica la habilidad.

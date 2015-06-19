@@ -23,14 +23,20 @@ class Habilidad_DestruirCartaPorDado(Habilidad):
         """
         
         resultado_dado = interfaz.lanzar_dado()
-        print resultado_dado
-        if pos_de_campo < 4:
-            victima = jugador
-            campo = imp_t.POSICIONES_CAMPO_FRONTAL[resultado_dado - 1]
-        else:
+
+        if resultado_dado < 4:
             victima = tablero.obtener_oponente(jugador)
-            campo = imp_t.POSICIONES_CAMPO_FRONTAL[resultado_dado - 4]
-        tablero.remover_carta(victima, imp_t.CAMPO_FRONTAL ,campo)
+        else:
+            victima = jugador
+            
+        cartas = tablero.obtener_cartas_campo_frontal(victima)
+        for carta in cartas:
+            if carta != None:
+                tablero.remover_carta(victima, imp_t.CAMPO_FRONTAL ,cartas.index(carta))
+                interfaz.mostrar_informacion(str(carta), "Carta destruida")
+                break
+        if carta == None:
+            interfaz.mostrar_informacion("No hay cartas.", "Carta destruida")
 
     def obtener_texto(self):
         """
