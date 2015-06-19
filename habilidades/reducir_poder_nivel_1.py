@@ -33,7 +33,6 @@ class Habilidad_ReducirPoderNivel1(Habilidad):
         for carta in cartas:
             if not carta:
                 continue
-            print carta
             self.aplicar_en_carta(carta)
 
     def obtener_texto(self):

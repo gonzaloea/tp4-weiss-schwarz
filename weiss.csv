@@ -2,10 +2,10 @@ CHARACTER|Gohan SSJ2|blue|2| |Gohan en la pelea con cell$ donde alcanza esta tra
 CHARACTER|Gohan SSJ2|blue|2| |Gohan en la pelea con cell$ donde alcanza esta transformación.|1|0|2750|1|Luchador,Saiyajin
 CHARACTER|Freezer|red|1| |Freezer en su ultima transformación|1|0|4000|1|Changlong, Maligno
 CHARACTER|Freezer|red|1| |Freezer en su ultima transformación|1|0|4000|1|Changlong, Maligno
-CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Maligno,Saiyajin
-CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Maligno,Saiyajin
-CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Maligno,Saiyajin
-CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Maligno,Saiyajin
+CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Luchador,Saiyajin
+CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Luchador,Saiyajin
+CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Luchador,Saiyajin
+CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Luchador,Saiyajin
 CHARACTER|Goku SSJ4|green|1| |Goku en la ultima tranformacion|3|1|5500|2|Definitivo,Saiyajin
 CHARACTER|Goku Infantil|blue|0| |Goku en su infancia.|0|0|500|1|Inutil,Saiyajin
 CHARACTER|Goku Infantil|blue|0| |Goku en su infancia.|0|0|500|1|Inutil,Saiyajin
@@ -31,12 +31,12 @@ CHARACTER|Yayirobe|green|0| |Inutil Yajirobe|0|0|400|1|Inutil,Humano
 CHARACTER|Yayirobe|green|0| |Inutil Yajirobe|0|0|400|1|Inutil,Humano
 CHARACTER|Yayirobe|green|0| |Inutil Yajirobe|0|0|400|1|Inutil,Humano
 CHARACTER|Yayirobe|green|0| |Inutil Yajirobe|0|0|400|1|Inutil,Humano
-EVENT|Genkidama|blue|0|Destruir carta por dado|Lanza un dado. Si sale 1,2 o 3 destruye una de tu campo.$Si sale 4,5 o 6 destruye una de su campo.|0|0
-EVENT|Genkidama|blue|0|Destruir carta por dado|Lanza un dado. Si sale 1,2 o 3 destruye una de tu campo.$Si sale 4,5 o 6 destruye una de su campo.|0|0
-EVENT|Genkidama|blue|0|Destruir carta por dado|Lanza un dado. Si sale 1,2 o 3 destruye una de tu campo.$Si sale 4,5 o 6 destruye una de su campo.|0|0
-EVENT|Genkidama|blue|0|Destruir carta por dado|Lanza un dado. Si sale 1,2 o 3 destruye una de tu campo.$Si sale 4,5 o 6 destruye una de su campo.|0|0
-EVENT|Pilaf y su pandilla|green|0|Robar carta lanzando una moneda| Lanza una moneda; mientras que sea cara, saca una carta$ del mazo del enemigo y la envıa a su zona de descarte.$Se detiene cuando sale cruz o el mazo enemigo esta$ vacıo.|0|0
-EVENT|Pilaf y su pandilla|green|0|Robar carta lanzando una moneda| Lanza una moneda; mientras que sea cara, saca una carta$ del mazo del enemigo y la envıa a su zona de descarte.$Se detiene cuando sale cruz o el mazo enemigo esta$ vacıo.|0|0
+EVENT|Genkidama|blue|0|Destruir carta por dado|La poderosa genkidama|0|0
+EVENT|Genkidama|blue|0|Destruir carta por dado|La poderosa genkidama|0|0
+EVENT|Genkidama|blue|0|Destruir carta por dado|La poderosa genkidama|0|0
+EVENT|Genkidama|blue|0|Destruir carta por dado|La poderosa genkidama|0|0
+EVENT|Pilaf y su pandilla|green|0|Robar carta lanzando una moneda| Pilaf y su pandilla ansian robarte las cartas|0|0
+EVENT|Pilaf y su pandilla|green|0|Robar carta lanzando una moneda| Pilaf y su pandilla ansian robarte las cartas|0|0
 CLIMAX|Ring de Cell|red|1|Aumento poder a subtipo|El ring donde se lleva a cabo el torneo de artes marciales de cell
 CLIMAX|Ring de Cell|red|1|Aumento poder a subtipo|El ring donde se lleva a cabo el torneo de artes marciales de cell
 CLIMAX|Ring de Cell|red|1|Aumento poder a subtipo|El ring donde se lleva a cabo el torneo de artes marciales de cell

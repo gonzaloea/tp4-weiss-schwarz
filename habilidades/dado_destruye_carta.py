@@ -42,7 +42,7 @@ class Habilidad_DestruirCartaPorDado(Habilidad):
         :return: String que contiene la descripcion de la habilidad.
         """
         texto = self._obtener_texto_base()
-        texto += "Lanza un dado. Si se obtiene 1, 2 o 3 destruye carta de su campo; 4, 5 o 6 del campo enemigo."
+        texto += "Lanza un dado. Si se obtiene 1, 2 o 3 destruye carta\n de su campo; 4, 5 o 6 del campo enemigo."
         return texto
 
     def obtener_nombre(self):

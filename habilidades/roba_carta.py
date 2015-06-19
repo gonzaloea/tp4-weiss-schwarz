@@ -39,7 +39,7 @@ class Habilidad_RobaCarta(Habilidad):
         :return: String que contiene la descripcion de la habilidad.
          """
         texto = self._obtener_texto_base()
-        texto += "Lanza una moneda. Si sale cara roba una carta del mazo del oponente y la tira a su zona de descarte. Se detiene cuando sale cruz o el mazo del oponente esta vacio"
+        texto += "Lanza una moneda. Si sale cara roba una carta del mazo\n del oponente y la tira a su zona de descarte. Se detiene\n cuando sale cruz o el mazo del oponente esta vacio"
         return texto
 
 

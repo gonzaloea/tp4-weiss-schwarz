@@ -512,19 +512,16 @@ class TableroJuego(object):
         """
         if isinstance(carta, CartaPersonaje):
             if self.jugar_personaje(jugador, carta):
-                print carta.obtener_habilidad()
                 self.aplicar_habilidad_sobre_tablero(jugador, carta.obtener_habilidad(), EFECTO_CONTINUO)
                 return True
             return False
         elif isinstance(carta, CartaEvento):
             if self.jugar_evento(jugador, carta):
-                print carta.obtener_habilidad()
                 self.aplicar_habilidad_sobre_tablero(jugador, carta.obtener_habilidad(), EFECTO_TEMPORAL)
                 return True
             return False
         elif isinstance(carta, CartaClimax):
             if self.jugar_climax(jugador, carta):
-                print carta.obtener_habilidad()
                 self.aplicar_habilidad_sobre_tablero(jugador, carta.obtener_habilidad(), EFECTO_TEMPORAL)
                 return True
             return False
@@ -704,7 +701,6 @@ class TableroJuego(object):
         en el mismo orden que fueron aplicado en este.
         :return: No tiene valor de retorno.
         """
-        print "empieza turno: "+str(self.habilidades)
         for habilidad,jugador,continuidad in self.habilidades:
             habilidad.aplicar_en_tablero(self,jugador)
 
@@ -715,8 +711,7 @@ class TableroJuego(object):
         para ser aplicadas en el proximo turno (en el mismo orden en el que se aplicaron en este turno).
         :return: No tiene tipo de retorno.
         """
-        print "termina turno: "+str(self.habilidades)
-        #
+        #Desactivo habilidades y borro temporales.
         index_iter = xrange(len(self.habilidades))
         for index in reversed(index_iter):
             #itero en reversa para darle efecto de pila
@@ -725,6 +720,11 @@ class TableroJuego(object):
             if continuidad == EFECTO_TEMPORAL:
                 #Si la habilidad es temporal, la remuevo de la lista.
                 self.habilidades.pop(index)
+        #Descarto cartas climax
+        self.schwarz.remover_climax()
+        self.weiss.remover_climax()
+
+        
 
     def aplicar_habilidades_en_carta(self, card):
         """
