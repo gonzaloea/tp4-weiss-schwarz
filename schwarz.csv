@@ -2,15 +2,18 @@ CHARACTER|Gohan SSJ2|blue|2| |Gohan en la pelea con cell$ donde alcanza esta tra
 CHARACTER|Gohan SSJ2|blue|2| |Gohan en la pelea con cell$ donde alcanza esta transformación.|1|0|2750|1|Luchador,Saiyajin
 CHARACTER|Freezer|red|1| |Freezer en su ultima transformación|1|0|4000|1|Changlong, Maligno
 CHARACTER|Freezer|red|1| |Freezer en su ultima transformación|1|0|4000|1|Changlong, Maligno
+CHARACTER|Freezer|red|1| |Freezer en su ultima transformación|1|0|4000|1|Changlong, Maligno
 CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Luchador,Saiyajin
 CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Luchador,Saiyajin
 CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Luchador,Saiyajin
 CHARACTER|Vegeta|red|1| |Vegeta recien llegado para destruir la tierra.|0|0|1500|1|Luchador,Saiyajin
 CHARACTER|Goku SSJ4|green|1| |Goku en la ultima tranformacion|3|1|5500|2|Definitivo,Saiyajin
+CHARACTER|Goku SSJ4|green|1| |Goku en la ultima tranformacion|3|1|5500|2|Definitivo,Saiyajin
 CHARACTER|Goku Infantil|blue|0| |Goku en su infancia.|0|0|500|1|Inutil,Saiyajin
 CHARACTER|Goku Infantil|blue|0| |Goku en su infancia.|0|0|500|1|Inutil,Saiyajin
 CHARACTER|Goku Infantil|blue|0| |Goku en su infancia.|0|0|500|1|Inutil,Saiyajin
 CHARACTER|Goku Infantil|blue|0| |Goku en su infancia.|0|0|500|1|Inutil,Saiyajin
+CHARACTER|Kid Buu|red|1| |Buu|2|0|3500|1|Maligno,Majin
 CHARACTER|Kid Buu|red|1| |Buu|2|0|3500|1|Maligno,Majin
 CHARACTER|Goku Kaioken|red|0| |Goku con el kaioken activado|0|0|1550|1|Luchador,Saiyajin
 CHARACTER|Goku Kaioken|red|0| |Goku con el kaioken activado|0|0|1550|1|Luchador,Saiyajin
@@ -22,10 +25,14 @@ CHARACTER|Cell Imperfecto|blue|0| |Cell recien salido del capullo.|0|0|1500|1|Ma
 CHARACTER|Cell Imperfecto|blue|0| |Cell recien salido del capullo.|0|0|1500|1|Maldad,Experimento
 CHARACTER|Cell Imperfecto|blue|0| |Cell recien salido del capullo.|0|0|1500|1|Maldad,Experimento
 CHARACTER|Baby Vegeta|red|2| |Vegeta poseido por el alien Baby.|3|1|5400|2|Tsufur,Saiyajin
+CHARACTER|Baby Vegeta|red|2| |Vegeta poseido por el alien Baby.|3|1|5400|2|Tsufur,Saiyajin
+CHARACTER|Gogeta SSJ4|blue|2| |Vegeta y Goku fusionados en fase SSJ4|3|2|8000|1|Fusion,Saiyajin
 CHARACTER|Gogeta SSJ4|blue|2| |Vegeta y Goku fusionados en fase SSJ4|3|2|8000|1|Fusion,Saiyajin
 CHARACTER|Majin Buu|green|0| |Buu en la forma mas inofensiva.|1|0|3000|1|Ingenuo,Majin
 CHARACTER|Majin Buu|green|0| |Buu en la forma mas inofensiva.|1|0|3000|1|Ingenuo,Majin
 CHARACTER|Majin Vegeta|blue|1| |Vegeta poesido por el poder maligno majin|1|0|2900|1|Majin,Saiyajin
+CHARACTER|Majin Vegeta|blue|1| |Vegeta poesido por el poder maligno majin|1|0|2900|1|Majin,Saiyajin
+CHARACTER|Omega Shenron|red|2| |Omega shenron luego de reunir las 7 esferas|3|2|7500|1|Definitivo,Maligno
 CHARACTER|Omega Shenron|red|2| |Omega shenron luego de reunir las 7 esferas|3|2|7500|1|Definitivo,Maligno
 CHARACTER|Yayirobe|green|0| |Inutil Yajirobe|0|0|400|1|Inutil,Humano
 CHARACTER|Yayirobe|green|0| |Inutil Yajirobe|0|0|400|1|Inutil,Humano

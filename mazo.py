@@ -3,7 +3,7 @@ from carta import CartaPersonaje, CartaEvento, CartaClimax
 import habilidades
 from habilidades import *
 
-LIMITE_CARTAS_MAZO = 43
+LIMITE_CARTAS_MAZO = 50
 LIMITE_COPIAS_CARTA = 4
 LIMITE_CARTAS_CLIMAX = 8
 

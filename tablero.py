@@ -428,7 +428,7 @@ class TableroJuego(object):
         turnos anteriores) y la referencia a la interfaz grafica. Ejecuta y resuelve las acciones efectuadas por los
         jugadores y las fases del juego (robar cartas, poner en el campo, combate, etc.)."""
 
-    def __init__(self, interfaz=None, mazo_weiss=None, mazo_schwarz=None):
+    def __init__(self, interfaz, mazo_weiss, mazo_schwarz):
         """
         :param interfaz: Refencia a la interfaz grafica.
         :param mazo_*: Referencia a un mazo
