@@ -34,7 +34,7 @@ class Habilidad_DestruirCartaPorDado(Habilidad):
                 tablero.obtener_interfaz().mostrar_informacion(str(carta), "Carta destruida")
                 break
         if carta == None:
-            tablero.obtener_interfaz()).mostrar_informacion("No hay cartas.", "Carta destruida")
+            tablero.obtener_interfaz().mostrar_informacion("No hay cartas.", "Carta destruida")
 
     def obtener_texto(self):
         """

@@ -17,8 +17,9 @@ class Habilidad_AumentoPoderSubtipo(Habilidad):
         :return: No tiene valor de retorno.
         """
         if isinstance(carta, CartaPersonaje) and self.subtipo in carta.obtener_subtipos():
-			print carta
+            print carta
             carta.establecer_poder(carta.obtener_poder() + self.aumento)
+            print carta.obtener_poder()
 
     def aplicar_en_tablero(self, tablero, jugador):
         """

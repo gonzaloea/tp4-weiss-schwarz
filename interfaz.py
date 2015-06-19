@@ -295,6 +295,6 @@ class Interfaz_Ventana(object):
         Simula el lanzamiento de una moneda y muestra el resultado en una ventana informativa.
         :return: String con las contantes CARA o CRUZ, que es el resultado del lanzamiento de la moneda.
         """
-        resultado = random.choice(CARA, CRUZ)
+        resultado = random.choice([CARA, CRUZ])
         self.mostrar_informacion("Salio: " + resultado, "Moneda lanzada")
         return resultado

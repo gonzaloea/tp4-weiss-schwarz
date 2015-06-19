@@ -17,17 +17,14 @@ class Habilidad_RobaCarta(Habilidad):
         :param jugador: Jugador que jugo la carta con la habilidad. Debe ser una de las constantes WEISS o SCHWARZ de tablero.py.
         :return: No tiene valor de retorno.
         """
-        resultado_moneda = tablero.obtener_interfaz().lanzar_moneda()
-        if resultado_moneda == interfaz.CARA:
-            campo_oponente = tablero.obtener_campo_jugador(jugador)
-            mazo_oponente = campo_oponente.obtener_mazo()
-            if mazo_oponente.esta_vacio():
-                return
-            oponente = tablero.obtener_oponente(jugador)
-            carta_robada = tablero.robar_cartas(oponente)
-            campo_oponente.descartar_carta(carta_robada)
-        else:
-            return
+        oponente = tablero.obtener_oponente(jugador)
+        campo_oponente = tablero.obtener_campo_jugador(oponente)
+        mazo_oponente = campo_oponente.obtener_mazo()
+        while  tablero.obtener_interfaz().lanzar_moneda() == interfaz.CARA and not mazo_oponente.esta_vacio():
+                carta_robada = tablero.robar_cartas(oponente)
+                tablero.obtener_interfaz().mostrar_informacion(str(carta_robada[0]), "Carta descartada")
+                campo_oponente.descartar_carta(carta_robada[0])
+                tablero.obtener_interfaz().actualizar_tablero(tablero)
             
     def obtener_nombre(self):
         """

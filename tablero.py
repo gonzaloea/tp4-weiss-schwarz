@@ -716,6 +716,7 @@ class TableroJuego(object):
         :return: No tiene tipo de retorno.
         """
         print "termina turno: "+str(self.habilidades)
+        #
         index_iter = xrange(len(self.habilidades))
         for index in reversed(index_iter):
             #itero en reversa para darle efecto de pila
